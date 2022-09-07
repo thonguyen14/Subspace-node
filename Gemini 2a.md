@@ -1,8 +1,8 @@
-#Dowmload
-      sudo wget https://github.com/subspace/subspace/releases/download/gemini-2a-2022-sep-06/subspace-node-ubuntu-x86_64-gemini-2a-2022-sep-06 && sudo wget https://github.com/subspace/subspace/releases/download/gemini-2a-2022-sep-06/subspace-farmer-ubuntu-x86_64-gemini-2a-2022-sep-06
+# Dowmload
+        sudo wget https://github.com/subspace/subspace/releases/download/gemini-2a-2022-sep-06/subspace-node-ubuntu-x86_64-gemini-2a-2022-sep-06 && sudo wget https://github.com/subspace/subspace/releases/download/gemini-2a-2022-sep-06/subspace-farmer-ubuntu-x86_64-gemini-2a-2022-sep-06
 
-      sudo mv subspace-node-ubuntu-x86_64-gemini-2a-2022-sep-06 /usr/local/bin/subspace-node && sudo mv subspace-farmer-ubuntu-x86_64-gemini-2a-2022-sep-06 /usr/local/bin/subspace-farmer && sudo chmod +x /usr/local/bin/subspace*
-#tạo systemd
+        sudo mv subspace-node-ubuntu-x86_64-gemini-2a-2022-sep-06 /usr/local/bin/subspace-node && sudo mv subspace-farmer-ubuntu-x86_64-gemini-2a-2022-sep-06 /usr/local/bin/subspace-farmer && sudo chmod +x /usr/local/bin/subspace*
+# tạo systemd
      sudo tee /etc/systemd/system/subspace-node.service > /dev/null <<EOF
      [Unit]
      Description=Subspace Node 
@@ -36,14 +36,14 @@
      [Install] 
      WantedBy=multi-user.target
      EOF
-#Run     
+# Run     
      sudo systemctl daemon-reload && sudo systemctl enable subspace-farmer.service && sudo systemctl enable subspace-node.service
      systemctl restart subspace-node.service 
      systemctl restart subspace-farmer.service 
      
      journalctl -u subspace-node.service -f -o cat
      journalctl -u subspace-farmer.service -f -o cat
-#delete node
+# delete node
      sudo systemctl stop subspace-node.service subspace-farmer.service
      sudo systemctl disable subspace-node.service subspace-farmer.service
      rm -rf /root/.local/share/subspace-farmer/
