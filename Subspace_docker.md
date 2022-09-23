@@ -28,7 +28,7 @@
     docker compose logs -f --tail=100 | grep subspace1
 # stop a node
     docker compose down
-# If you want run the second node or n node, just change the code here, node2 --> noden
+# If you want run the second node or n node, just change the code here, subspace2 --> subspacen
     cd $HOME
     mkdir subspace2
     cd subspace2
