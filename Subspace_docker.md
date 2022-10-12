@@ -42,5 +42,5 @@
 # delete node
     cd subspace1
     docker compose down -v
-    docker kill subspace1
-    cd && rm -rf /root/supspace1/
+    rm -rf .evn
+    cd && rm -rf /root/subspace1/
