@@ -18,6 +18,10 @@
     cd subspace1
     wget -O docker-compose.yaml https://raw.githubusercontent.com/thonguyen14/Subspace-node/main/Gemini3/docker-compose.yaml
 ```
+# edit docker-compose.yaml file as you like
+```
+vi docker-compose.yaml
+```
 # you can check which port you are using by this command ̣( subspace use ports Node Port:30333 ,Node DSN Port:30433 ,Farmer Port:30533 )
 ```
     lsof -i -P -n | grep LISTEN
